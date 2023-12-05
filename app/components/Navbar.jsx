@@ -1,11 +1,14 @@
 import { useRouter } from 'next/navigation';
+import { useEffect,useState } from 'react';
 
 const Navbar = () => {
   const router = useRouter();
-  const username = localStorage.getItem('user')
-    ? JSON.parse(localStorage.getItem('user')).username
-    : '';
+  const [username,setUsername]=useState("");
+  useEffect(()=>{
+    setUsername(localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).username : '');
+  },[])
 
+console.log(username)
   const handleLogout = () => {
     // Remove token and user from local storage
     localStorage.removeItem('token');
@@ -16,9 +19,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between bg-gray-800 text-white p-4">
+    <div className="flex items-center justify-between bg-gray-800 text-white p-4">
       <div className="flex items-center">
-        <span className="mr-4">Hello, {username}</span>
+        Hello, {username}
       </div>
       <div>
         <button
@@ -28,7 +31,7 @@ const Navbar = () => {
           Logout
         </button>
       </div>
-    </nav>
+    </div>
   );
 };
 

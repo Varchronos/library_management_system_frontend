@@ -53,9 +53,18 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen">
       <Navbar />
-      <h1>Welcome to the Home Page!</h1>
+      <h1 className='mt-8 mb-10 self-center text-2xl font-semibold'>Welcome to the Home Page!</h1>
+      <input
+            type="text"
+            id="searchBar"
+            // value={email}
+            // onChange={(e) => setEmail(e.target.value)}
+            className=" self-center w-1/3 px-3 py-2 mb-6 border rounded-md focus:outline-none focus:border-blue-500"
+            placeholder='search books'
+            required
+          />
       {!firstBook && <p>Loading...</p>}
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className=" mx-auto grid grid-cols-1 gap-20 sm:grid-cols-2 md:grid-cols-3">
         {books?.BookList ? (
           books.BookList.map((book, index) => (
             <div key={index}>
