@@ -1,14 +1,16 @@
 import { useRouter } from 'next/navigation';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const router = useRouter();
-  const [username,setUsername]=useState("");
-  useEffect(()=>{
-    setUsername(localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).username : '');
-  },[])
+  const [username, setUsername] = useState("");
 
-console.log(username)
+  useEffect(() => {
+    const foundUserName = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).username : '';
+    if(foundUserName)setUsername();
+    console.log(username)
+  }, [])
+
   const handleLogout = () => {
     // Remove token and user from local storage
     localStorage.removeItem('token');
@@ -17,6 +19,7 @@ console.log(username)
     // Redirect to the login page
     router.push('/login');
   };
+
 
   return (
     <div className="flex items-center justify-between bg-gray-800 text-white p-4">
