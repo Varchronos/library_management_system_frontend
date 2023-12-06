@@ -33,7 +33,6 @@ const BookCard = ({ book }) => {
         } catch (error) {
             console.error('Error borrowing the book:', error);
         }
-
     };
 
     const handleReturnBook = async () => {
@@ -61,15 +60,14 @@ const BookCard = ({ book }) => {
         }
     };
     return (
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-            <a href="#">
-                <img
-                    className="rounded-t-lg"
-                    src={"https://5.imimg.com/data5/SELLER/Default/2021/11/QQ/SI/XU/60672026/5.jpg"}
-                    alt={book.bookName}
-                />
-            </a>
-            <div className="p-5 flex flex-col">
+        <div className="max-w-xs w-full h-full bg-white border border-gray-200 rounded-lg shadow">            <a href="#">
+            <img
+                className=" object-cover rounded-t-lg w-full max-h-48"
+                src={`${book.imageUrl?book.imageUrl:'https://5.imimg.com/data5/SELLER/Default/2021/11/QQ/SI/XU/60672026/5.jpg'}`}
+                alt={book.bookName}
+            />
+        </a>
+            <div className="h-fit p-5 flex flex-col justify-end">
                 <a href="#">
                     <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">
                         {book.bookName}

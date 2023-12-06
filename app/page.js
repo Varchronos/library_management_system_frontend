@@ -47,7 +47,7 @@ export default function Home() {
 
   }, []);
 
-  const firstBook = books?.BookList && books.BookList.length > 0 ? books.BookList[0] : null;
+  // const firstBook = books?.BookList && books.BookList.length > 0 ? books.BookList[0] : null;
 
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredBooks, setFilteredBooks] = useState(books.BookList);
@@ -67,9 +67,9 @@ export default function Home() {
   console.log('Books:', filteredBooks);
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-full bg-white">
       <Navbar />
-      <h1 className='mt-8 mb-10 self-center text-2xl font-semibold'>Welcome to the Home Page!</h1>
+      <h1 className='mt-8 mb-10 self-center text-2xl font-semibold text-slate-900'>All Books</h1>
       <input
         type="text"
         id="searchBar"
@@ -88,10 +88,9 @@ export default function Home() {
                 <BookCard book={book} />
               </div>
             ))
-          ) : (
-            <p>No books found</p>
-          )
+          ) : ''
         }
+        {filteredBooks?filteredBooks.length===0 && <p>No books found</p> : ''}
       </div>
     </div>
   );
