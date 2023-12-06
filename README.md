@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# library_management_system_backend
+Backend for the Library Management System project
 
-## Getting Started
+## Features
+1. **User Panel:**
+   - Create an account ![icon](https://img.shields.io/badge/account-Create-brightgreen?style=flat-square)
+   - Borrow books ![icon](https://img.shields.io/badge/books-Borrow-blue?style=flat-square)
+   - Return books ![icon](https://img.shields.io/badge/books-Return-brightgreen?style=flat-square)
 
-First, run the development server:
+2. **Admin Panel:**
+   - Access features similar to the user panel ![icon](https://img.shields.io/badge/features-Access-blueviolet?style=flat-square)
+   - Add books ![icon](https://img.shields.io/badge/books-Add-orange?style=flat-square)
+   - Remove books ![icon](https://img.shields.io/badge/books-Remove-red?style=flat-square)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. **Book Borrowing Restrictions:**
+   - Users cannot borrow books already borrowed by themselves or others ![icon](https://img.shields.io/badge/restrictions-No%20Double%20Borrowing-lightgrey?style=flat-square)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Authentication:**
+   - Authentication required for every activity ![icon](https://img.shields.io/badge/authentication-Required-ff69b4?style=flat-square)
+   - Users cannot perform any action without authentication ![icon](https://img.shields.io/badge/authentication-Required-ff69b4?style=flat-square)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Backend:**
 
-## Learn More
+[![NodeJS](https://img.shields.io/badge/NodeJS-14.x-brightgreen?style=flat-square&logo=node.js)](https://nodejs.org/)   
+[![Express](https://img.shields.io/badge/Express-4.x-blue?style=flat-square&logo=express)](https://expressjs.com/)
+[![JWT](https://img.shields.io/badge/JWT-latest-orange?style=flat-square&logo=json-web-tokens)](https://jwt.io/)    
+[![dotenv](https://img.shields.io/badge/dotenv-latest-yellow?style=flat-square&logo=npm)](https://www.npmjs.com/package/dotenv)   
+[![MongoDB](https://img.shields.io/badge/MongoDB-latest-green?style=flat-square&logo=mongodb)](https://www.mongodb.com/)   
+[![Mongoose](https://img.shields.io/badge/Mongoose-latest-success?style=flat-square&logo=mongoose)](https://mongoosejs.com/)   
+[![Cors](https://img.shields.io/badge/Cors-latest-blueviolet?style=flat-square&logo=mozilla-firefox-browser)](https://www.npmjs.com/package/cors)
 
-To learn more about Next.js, take a look at the following resources:
+**Frontend:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   [![ReactJS](https://img.shields.io/badge/ReactJS-latest-blue?style=flat-square&logo=react)](https://react.dev/)
+   [![NextJS](https://img.shields.io/badge/NextJS-latest-success?style=flat-square&logo=next.js)](https://nextjs.org/)
+   [![Axios](https://img.shields.io/badge/Axios-latest-informational?style=flat-square&logo=axios)](https://axios-http.com/)
+   [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-latest-blueviolet?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Testing Tools:**
 
-## Deploy on Vercel
+[![Postman](https://img.shields.io/badge/Postman-latest-orange?style=flat-square&logo=postman)](https://www.postman.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Not deployed yet, work in progress
+
+## Documentation Links
+
+- [NodeJS Documentation](https://nodejs.org/documentation/)
+- [Express Documentation](https://expressjs.com/en/4x/api.html)
+- [JWT Documentation](https://jwt.io/introduction/)
+- [MongoDB Documentation](https://docs.mongodb.com/)
+- [ReactJS Documentation](https://reactjs.org/docs/getting-started.html)
+- [NextJS Documentation](https://nextjs.org/docs/getting-started)
+- [Axios Documentation](https://axios-http.com/docs/intro)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Postman Documentation](https://learning.postman.com/docs/)
+
+
+## Authors
+
+- **Varchronos** - *FrontEnd Developer* - [GitHub Profile](https://github.com/Varchronos)
+
+## Acknowledgments
+
+- will be updating
